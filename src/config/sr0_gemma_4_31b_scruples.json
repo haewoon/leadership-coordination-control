@@ -1,0 +1,55 @@
+{
+  "experiment_name": "sr0_gemma_4_31b_scruples",
+  "output_dir": "outputs/runs/sr0_gemma_4_31b_scruples",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gemma-4-31B-it"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the verdict that survives the strongest counterargument from the other side's perspective."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the verdict most directly supported by what the author actually did, without adding outside assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the verdict that best matches how an ordinary, fair-minded community would judge the situation."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "theory_free_control",
+    "transactional",
+    "transformational",
+    "situational"
+  ],
+  "tasks": [
+    {
+      "name": "social_chemistry",
+      "path": "data/splits/scruples_contested_99.jsonl",
+      "limit": 99
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "experiment_name": "sr0_gpt_oss_120b_mixed_mad",
+  "output_dir": "outputs/runs/sr0_gpt_oss_120b_mixed_mad",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gpt-oss-120b"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the answer that survives the strongest counterexample supported by the prompt."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the answer that most directly matches the question and choices without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the answer that best matches ordinary expectations from the given information."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "mad",
+    "situational",
+    "transformational"
+  ],
+  "tasks": [
+    {
+      "name": "mixed_benchmark",
+      "path": "data/splits/mixed_benchmark_150.jsonl",
+      "limit": 150
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

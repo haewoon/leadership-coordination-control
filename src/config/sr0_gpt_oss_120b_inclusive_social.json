@@ -1,0 +1,53 @@
+{
+  "experiment_name": "sr0_gpt_oss_120b_inclusive_social",
+  "output_dir": "outputs/runs/sr0_gpt_oss_120b_inclusive_social",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gpt-oss-120b"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the answer that survives the strongest social counterexample."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the answer that most directly matches the situation and action wording without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the answer that best matches ordinary social expectations in real life."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "situational",
+    "inclusive"
+  ],
+  "tasks": [
+    {
+      "name": "social_chemistry",
+      "path": "data/splits/social_chemistry_broad_bc_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

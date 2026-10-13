@@ -1,0 +1,62 @@
+{
+  "experiment_name": "sr0_llama_4_scout_alphanli_coord",
+  "output_dir": "outputs/runs/sr0_llama_4_scout_alphanli_coord",
+  "model": {
+    "provider": "openai_compat",
+    "name": "meta-llama/llama-4-scout",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": "OPEN_ROUTER_API_KEY"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the answer that survives the strongest causal counterexample."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the answer that most directly matches the observations without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the answer that best fits ordinary causal expectations in real life."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "llm_coordinator"
+  ],
+  "tasks": [
+    {
+      "name": "alphanli",
+      "path": "data/splits/alphanli_scale_step_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512,
+    "extra_body": {
+      "provider": {
+        "order": [
+          "DeepInfra"
+        ],
+        "allow_fallbacks": false
+      }
+    }
+  },
+  "runner": {
+    "agent_parallelism": 3
+  },
+  "shared_round0_source": "outputs/runs/sr0_llama_4_scout_alphanli"
+}

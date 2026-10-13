@@ -1,0 +1,55 @@
+{
+  "experiment_name": "sr0_gemma_4_31b_rb6_alphanli",
+  "output_dir": "outputs/runs/sr0_gemma_4_31b_rb6_alphanli",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gemma-4-31B-it"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the answer that survives the strongest causal counterexample."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the answer that most directly matches the observations without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the answer that best fits ordinary causal expectations in real life."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "theory_free_control",
+    "transactional",
+    "transformational",
+    "situational"
+  ],
+  "tasks": [
+    {
+      "name": "alphanli",
+      "path": "data/splits/alphanli_scale_step_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 6,
+    "integration": 6
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

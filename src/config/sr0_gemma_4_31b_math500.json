@@ -1,0 +1,59 @@
+{
+  "experiment_name": "sr0_gemma_4_31b_math500",
+  "output_dir": "outputs/runs/sr0_gemma_4_31b_math500",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gemma-4-31B-it"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "step_by_step",
+      "instruction": "Work the problem step by step, write the arithmetic and algebra explicitly, and double-check each step before committing to the final number."
+    },
+    {
+      "name": "estimate_first",
+      "instruction": "Form a rough estimate or sanity-check bound first, then compute the exact value and verify it lies in the expected range."
+    },
+    {
+      "name": "verify_units",
+      "instruction": "Track the meaning of each quantity throughout (counts, magnitudes, units), and confirm the final number matches what the question asks for."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "conditions": [
+    "flat",
+    "theory_free_control",
+    "transactional",
+    "transformational",
+    "situational",
+    "transactional_accept_only"
+  ],
+  "tasks": [
+    {
+      "name": "math500",
+      "path": "data/splits/math500_hard_50.jsonl",
+      "limit": 50
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 2,
+    "integration": 4,
+    "open_ended_numeric": 3
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 1024
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

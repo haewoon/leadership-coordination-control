@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+.IGNORE
+
+# Run outputs and local data (the shipped tables under outputs/analysis/ are tracked)
+outputs/*
+!outputs/analysis/
+data/raw/
+data/processed/
+data/splits/*.jsonl

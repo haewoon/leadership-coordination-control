@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or build on the study, please cite the TMLR paper."
+type: software
+title: "Leadership as Coordination Control: Behavioral Signatures and the Recovery-Advantage Boundary in Multi-Agent LLM Teams"
+authors:
+  - family-names: Kwak
+    given-names: Haewoon
+    affiliation: "Indiana University Bloomington"
+date-released: 2026-10-13
+license: MIT
+repository-code: "https://github.com/haewoon/leadership-coordination-control"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20647820
+    description: "Earlier archived snapshot (v1.0.0), matching the first arXiv version"
+preferred-citation:
+  type: article
+  title: "Leadership as Coordination Control: Behavioral Signatures and the Recovery-Advantage Boundary in Multi-Agent LLM Teams"
+  authors:
+    - family-names: Kwak
+      given-names: Haewoon
+      affiliation: "Indiana University Bloomington"
+  journal: "Transactions on Machine Learning Research"
+  issn: 2835-8856
+  year: 2026
+  month: 10
+  url: "https://openreview.net/forum?id=gp77UrXyjT"
+  identifiers:
+    - type: other
+      value: "arXiv:2606.19111"
+      description: "arXiv preprint"

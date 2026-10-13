@@ -1,0 +1,55 @@
+{
+  "experiment_name": "sr0_gpt_oss_120b_ra_alphanli",
+  "output_dir": "outputs/runs/sr0_gpt_oss_120b_ra_alphanli",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gpt-oss-120b"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the answer that survives the strongest causal counterexample."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the answer that most directly matches the observations without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the answer that best fits ordinary causal expectations in real life."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "transactional",
+    "transformational",
+    "situational",
+    "random_action"
+  ],
+  "tasks": [
+    {
+      "name": "alphanli",
+      "path": "data/splits/alphanli_scale_step_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

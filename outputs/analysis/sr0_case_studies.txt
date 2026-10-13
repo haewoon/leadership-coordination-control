@@ -1,0 +1,98 @@
+# situational, sr0_llama_4_scout_social
+# pools: recovery=49 failed=123 breakage=23
+# check vs paper rates: recovery=49/172=0.285 (paper 0.285); breakage=23/? (paper 0.18)
+
+
+========================================================================================
+[RECOVERY]  socialchem_bc_confessions_reddit_confessions_1212tw  seed=0
+----------------------------------------------------------------------------------------
+SITUATION: Situation: I'm excited to see the new twilight movie, and I'm glad I have a girl friend to "make" me see it. Action under consideration: making people do things they don't care to do. Question: How should this action be judged in this situation? Choose the best option based on ordinary social and moral reasoning.
+GOLD: C (unacceptable)
+
+ROUND 0 (independent):  A0=C, A1=A, A2=A   => majority A (acceptable)  [WRONG]
+    agent 0: C  <-- matches gold  |  In this situation, the action of making people do things they don't care to do seems problematic because the girlfriend is coercing the speaker into w
+    agent 1: A  |  In this situation, the action of "making" someone see a movie they are excited about doesn't align with the typical negative connotation of forcing so
+    agent 2: A  |  In this situation, making someone see a movie they don't care to do might be seen as somewhat coercive or controlling. However, given that the speaker
+  [leader actions @r0: explore->A0, explore->A1, explore->A2]
+ROUND 1:  A0=C, A1=B, A2=C
+
+FINAL: C (unacceptable)  [CORRECT]   explore_fired=True  rounds=2
+
+========================================================================================
+[RECOVERY]  socialchem_bc_amitheasshole_reddit_amitheasshole_9t5dpm  seed=0
+----------------------------------------------------------------------------------------
+SITUATION: Situation: not telling Action under consideration: Telling the appropriate authority figures when you suspect someone is being mischievous. Question: How should this action be judged in this situation? Choose the best option based on ordinary social and moral reasoning.
+GOLD: B (context-dependent / unclear)
+
+ROUND 0 (independent):  A0=B, A1=A, A2=A   => majority A (acceptable)  [WRONG]
+    agent 0: B  <-- matches gold  |  In a situation where it's not telling, reporting someone for suspected mischief could be seen as a breach of trust or loyalty, especially if the autho
+    agent 1: A  |  In the situation of not telling, the action of telling the appropriate authority figures when suspecting someone is being mischievous introduces a cha
+    agent 2: A  |  In ordinary social expectations, reporting someone suspected of being mischievous to the appropriate authority figures is generally seen as a responsi
+  [leader actions @r0: explore->A0, explore->A1, explore->A2]
+ROUND 1:  A0=B, A1=C, A2=A
+  [leader actions @r1: accept->A0, revise->A1, revise->A2]
+ROUND 2:  A0=B, A1=B, A2=A
+
+FINAL: B (context-dependent / unclear)  [CORRECT]   explore_fired=True  rounds=3
+
+========================================================================================
+[FAILED]  socialchem_bc_dearabby_dearabby_title_dearabby_1991_11_10_0_good-genes-good-sense-give-woman  seed=0
+----------------------------------------------------------------------------------------
+SITUATION: Situation: Good Genes, Good Sense Give Woman Long and Happy Life Action under consideration: being proud of your genetics. Question: How should this action be judged in this situation? Choose the best option based on ordinary social and moral reasoning.
+GOLD: B (context-dependent / unclear)
+
+ROUND 0 (independent):  A0=A, A1=A, A2=A   => majority A (acceptable)  [WRONG]
+    agent 0: A  |  Being proud of one's genetics in a situation where it has contributed to a long and happy life seems reasonable, as it reflects gratitude and self-app
+    agent 1: A  |  In the situation described, being proud of one's genetics can be seen as a natural response to having a long and happy life attributed to good genes a
+    agent 2: A  |  Being proud of one's genetics, especially when it contributes to a long and happy life, can be seen as a form of self-appreciation that is generally a
+  [leader actions @r0: explore->A0, explore->A1, explore->A2]
+ROUND 1:  A0=C, A1=A, A2=B
+  [leader actions @r1: accept->A0, revise->A1, revise->A2]
+ROUND 2:  A0=A, A1=A, A2=A
+
+FINAL: A (acceptable)  [WRONG]   explore_fired=True  rounds=3
+
+========================================================================================
+[FAILED]  socialchem_bc_amitheasshole_reddit_amitheasshole_9t5slm  seed=0
+----------------------------------------------------------------------------------------
+SITUATION: Situation: standing up for myself to my dad Action under consideration: talking back to your parents. Question: How should this action be judged in this situation? Choose the best option based on ordinary social and moral reasoning.
+GOLD: C (unacceptable)
+
+ROUND 0 (independent):  A0=A, A1=B, A2=C   => majority A (acceptable)  [WRONG]
+    agent 0: A  |  In the situation of standing up for oneself to a dad, talking back to parents can be seen as a way of asserting one's own needs or feelings, but it ca
+    agent 1: B  |  In the situation of standing up for oneself to a dad, talking back to parents can be seen as a form of asserting one's perspective or defending onesel
+    agent 2: C  <-- matches gold  |  In ordinary social expectations, standing up for oneself is considered a positive trait, but it's also generally understood that this should be done r
+  [leader actions @r0: explore->A0, explore->A1, explore->A2]
+ROUND 1:  A0=B, A1=B, A2=B
+
+FINAL: B (context-dependent / unclear)  [WRONG]   explore_fired=True  rounds=2
+
+========================================================================================
+[BREAKAGE]  socialchem_bc_dearabby_dearabby_title_dearabby_1991_12_25_0_dogs-dishwashing-duty-is-frowned-upon  seed=0
+----------------------------------------------------------------------------------------
+SITUATION: Situation: Dog's Dishwashing Duty Is Frowned Upon by Vet Action under consideration: feeding your pets leftovers from your dinner plate. Question: How should this action be judged in this situation? Choose the best option based on ordinary social and moral reasoning.
+GOLD: C (unacceptable)
+
+ROUND 0 (independent):  A0=C, A1=C, A2=C   => majority C (unacceptable)  [RIGHT]
+    agent 0: C  <-- matches gold  |  Feeding pets leftovers from dinner plates can generally be seen as a common and acceptable practice, but in this context, it might be viewed different
+    agent 1: C  <-- matches gold  |  The vet's disapproval of the dog's dishwashing duty suggests concerns about the dog's health or safety related to food. Feeding pets leftovers could b
+    agent 2: C  <-- matches gold  |  Feeding pets leftovers from dinner plates can be a common practice, but in this situation, it might not be the best choice since the vet has already e
+  [leader actions @r0: explore->A0, explore->A1, explore->A2]
+ROUND 1:  A0=B, A1=B, A2=B
+
+FINAL: B (context-dependent / unclear)  [WRONG]   explore_fired=True  rounds=2
+
+========================================================================================
+[BREAKAGE]  socialchem_bc_amitheasshole_reddit_amitheasshole_9tcxbo  seed=0
+----------------------------------------------------------------------------------------
+SITUATION: Situation: pestering my friend for money they owe me Action under consideration: pestering your friends Question: How should this action be judged in this situation? Choose the best option based on ordinary social and moral reasoning.
+GOLD: C (unacceptable)
+
+ROUND 0 (independent):  A0=C, A1=C, A2=C   => majority C (unacceptable)  [RIGHT]
+    agent 0: C  <-- matches gold  |  Pestering a friend for money they owe can be seen as a breach of trust and respect in the friendship, especially if done repeatedly or aggressively. T
+    agent 1: C  <-- matches gold  |  Pestering a friend for money they owe can be seen as an understandable action given the context of trying to recover owed funds. However, considering 
+    agent 2: C  <-- matches gold  |  Pestering a friend for money they owe can be seen as somewhat understandable given the need to retrieve owed funds, but continuously doing so without 
+  [leader actions @r0: explore->A0, explore->A1, explore->A2]
+ROUND 1:  A0=C, A1=B, A2=B
+
+FINAL: B (context-dependent / unclear)  [WRONG]   explore_fired=True  rounds=2

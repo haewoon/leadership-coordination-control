@@ -1,0 +1,55 @@
+{
+  "experiment_name": "sr0_llama_4_scout_anli",
+  "output_dir": "outputs/runs/sr0_llama_4_scout_anli",
+  "model": {
+    "provider": "openai_compat",
+    "name": "llama-4-scout"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the relationship that survives the strongest counterexample to the hypothesis."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the relationship most directly supported by the literal premise wording, without adding outside assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the relationship that best fits ordinary real-world expectations about the premise and hypothesis."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "theory_free_control",
+    "transactional",
+    "transformational",
+    "situational"
+  ],
+  "tasks": [
+    {
+      "name": "commonsenseqa",
+      "path": "data/splits/anli_r3_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

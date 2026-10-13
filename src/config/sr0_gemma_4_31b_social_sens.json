@@ -1,0 +1,55 @@
+{
+  "experiment_name": "sr0_gemma_4_31b_social_sens",
+  "output_dir": "outputs/runs/sr0_gemma_4_31b_social_sens",
+  "model": {
+    "provider": "openai_compat",
+    "name": "gemma-4-31B-it"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the answer that survives the strongest social counterexample."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the answer that most directly matches the situation and action wording without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the answer that best matches ordinary social expectations in real life."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "situational",
+    "situational_split3",
+    "situational_lenient",
+    "situational_altlex"
+  ],
+  "tasks": [
+    {
+      "name": "social_chemistry",
+      "path": "data/splits/social_chemistry_broad_bc_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

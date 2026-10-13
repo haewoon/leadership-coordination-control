@@ -1,0 +1,55 @@
+{
+  "experiment_name": "sr0_llama_4_scout_winogrande",
+  "output_dir": "outputs/runs/sr0_llama_4_scout_winogrande",
+  "model": {
+    "provider": "openai_compat",
+    "name": "llama-4-scout"
+  },
+  "shared_round0": true,
+  "warmup_prompt": "Reply with exactly: READY",
+  "team_size": 3,
+  "agent_profiles": [
+    {
+      "name": "counterexample_first",
+      "instruction": "Prefer the option that still makes sense when you check it against the rest of the sentence."
+    },
+    {
+      "name": "surface_match",
+      "instruction": "Favor the option whose meaning most directly fits the sentence wording without adding extra assumptions."
+    },
+    {
+      "name": "plausibility_first",
+      "instruction": "Prefer the option that best fits ordinary real-world expectations."
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": [
+    "flat",
+    "theory_free_control",
+    "transactional",
+    "transformational",
+    "situational"
+  ],
+  "tasks": [
+    {
+      "name": "commonsenseqa",
+      "path": "data/splits/winogrande_xl_100.jsonl",
+      "limit": 100
+    }
+  ],
+  "round_budget": {
+    "closed_ended": 3,
+    "integration": 4
+  },
+  "generation": {
+    "temperature": 0.35,
+    "max_tokens": 512
+  },
+  "runner": {
+    "agent_parallelism": 3
+  }
+}

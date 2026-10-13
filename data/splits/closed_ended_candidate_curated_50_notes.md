@@ -1,0 +1,147 @@
+# Closed-Ended Candidate Curated 50
+
+This file is the next scale-step candidate set for the shared-information closed-ended regime.
+Construction rule:
+- keep the existing defended curated 6;
+- extend with stable reference-pool items from CommonsenseQA and StrategyQA;
+- maintain a balanced mix of approximately 25 CommonsenseQA and 25 StrategyQA items;
+- preserve the same exclusion list used in the candidate 30 build for benchmark-fragile or lower-diagnostic items;
+- use this set as the 50-item scale step before any move toward 100.
+
+Final candidate size: 50
+CommonsenseQA items: 25
+StrategyQA items: 25
+
+## Added beyond the original curated 6
+- `09b5f02f1ce6d2a28d70383a239cd1b8`
+  - source: `commonsenseqa`; gold: `A`; challenge score: `7.2`
+  - details: `{'top_distractor_similarity': 0.4, 'plausible_choice_count': 4, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `82bdf702116bca7605cde3954569b095`
+  - source: `commonsenseqa`; gold: `C`; challenge score: `6.5`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 2}`
+- `9453b0f2bd3a9ff93c948dde4a7a9bb3`
+  - source: `commonsenseqa`; gold: `B`; challenge score: `6.5`
+  - details: `{'top_distractor_similarity': 0.0, 'plausible_choice_count': 4, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `11486f615f20f2975079df3165eef20e`
+  - source: `commonsenseqa`; gold: `C`; challenge score: `6.2`
+  - details: `{'top_distractor_similarity': 0.4, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `0188cfd31403b8fdeb7f506a79f5c12b`
+  - source: `commonsenseqa`; gold: `B`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.5, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `3123cb4a7db53d79651750df6aa65cff`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `48cd96442f2e98d6c4e0fc42dde8a7af`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `53db057803482a444d7dee7c7e2ce2ee`
+  - source: `commonsenseqa`; gold: `C`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `59f14bdd1f2898765ec3b1c6656bc77a`
+  - source: `commonsenseqa`; gold: `A`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.5, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `65b8228ef6fbd0b134d604db454c26d5`
+  - source: `commonsenseqa`; gold: `A`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `7a3f7b04cd96b88e92a8a49e4ea300d4`
+  - source: `commonsenseqa`; gold: `E`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `d4067753425d9abfeb24af22def49b58`
+  - source: `commonsenseqa`; gold: `A`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `d5f4523980ce61c79a75cd5c7d751f46`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `6.0`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `26bd970548738a68e7b01489e15fcc1d`
+  - source: `commonsenseqa`; gold: `A`; challenge score: `5.75`
+  - details: `{'top_distractor_similarity': 0.25, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `9124431e7214a8a0bc3957bb97f1dee0`
+  - source: `commonsenseqa`; gold: `C`; challenge score: `5.75`
+  - details: `{'top_distractor_similarity': 0.25, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `ee26a66c434f9b58f8d58069cabe866f`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `5.75`
+  - details: `{'top_distractor_similarity': 0.25, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `a5e4d05c4e76cddfc3ac67e7450a9ee6`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `5.7`
+  - details: `{'top_distractor_similarity': 0.4, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `89e19e81071205db271231a17ad86cc1`
+  - source: `commonsenseqa`; gold: `B`; challenge score: `5.6`
+  - details: `{'top_distractor_similarity': 0.2, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 1}`
+- `4940cfa669ed367ebdb9c4143cf5d60e`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `5.5`
+  - details: `{'top_distractor_similarity': 0.0, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 2}`
+- `8bdbee042825dda81da4e56f553ecb06`
+  - source: `commonsenseqa`; gold: `B`; challenge score: `5.5`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `9e66e75f5ab9bcfcd604859186606334`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `5.5`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `b8eb19011a2046c9f84a58bd5fedb91a`
+  - source: `commonsenseqa`; gold: `D`; challenge score: `5.5`
+  - details: `{'top_distractor_similarity': 0.3333, 'plausible_choice_count': 3, 'duplicate_penalty': 0, 'cue_count': 0}`
+- `3486b6b5c69878bb088d`
+  - source: `strategyqa`; gold: `no`; challenge score: `10.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 4, 'comparator_count': 2, 'negation_count': 0}`
+- `af024277ec12d7845001`
+  - source: `strategyqa`; gold: `no`; challenge score: `10.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 4, 'comparator_count': 2, 'negation_count': 0}`
+- `c8e267b583f722ff485e`
+  - source: `strategyqa`; gold: `yes`; challenge score: `10.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 4, 'comparator_count': 2, 'negation_count': 0}`
+- `1647d6f49307d7678d18`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.5`
+  - details: `{'cue_count': 3, 'named_entity_count': 2, 'comparator_count': 2, 'negation_count': 0}`
+- `1337be5d470d68393db7`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `307c3ae5cff437eee937`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `30b5a9505949caa3c4cd`
+  - source: `strategyqa`; gold: `no`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `3bd6c0cff096123cc207`
+  - source: `strategyqa`; gold: `no`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `4f08d9a0fba58ad9ca73`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `6662006c915a62db5a89`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `71691ae5050e621c9b4c`
+  - source: `strategyqa`; gold: `no`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `7f8417d42ef9ea1e5a8c`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `9fb41cefb010f47033f3`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `e78a917a9d12dfe19ba4`
+  - source: `strategyqa`; gold: `no`; challenge score: `9.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 3, 'comparator_count': 2, 'negation_count': 0}`
+- `e8cc7615cfaf45069eb5`
+  - source: `strategyqa`; gold: `yes`; challenge score: `9.0`
+  - details: `{'cue_count': 1, 'named_entity_count': 6, 'comparator_count': 1, 'negation_count': 0}`
+- `589eb85285b438a0c59f`
+  - source: `strategyqa`; gold: `no`; challenge score: `8.5`
+  - details: `{'cue_count': 3, 'named_entity_count': 1, 'comparator_count': 2, 'negation_count': 0}`
+- `a071a8b56496258746d6`
+  - source: `strategyqa`; gold: `no`; challenge score: `8.5`
+  - details: `{'cue_count': 3, 'named_entity_count': 1, 'comparator_count': 2, 'negation_count': 0}`
+- `a96d28e1221bfbcf50a9`
+  - source: `strategyqa`; gold: `yes`; challenge score: `8.5`
+  - details: `{'cue_count': 3, 'named_entity_count': 1, 'comparator_count': 2, 'negation_count': 0}`
+- `0a4fa11abccd8dd84dc8`
+  - source: `strategyqa`; gold: `yes`; challenge score: `8.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 2, 'comparator_count': 2, 'negation_count': 0}`
+- `0b7787655f4a9d600dfc`
+  - source: `strategyqa`; gold: `yes`; challenge score: `8.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 2, 'comparator_count': 2, 'negation_count': 0}`
+- `20744bd481b4245333fa`
+  - source: `strategyqa`; gold: `yes`; challenge score: `8.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 2, 'comparator_count': 2, 'negation_count': 0}`
+- `27aca37fe8213109c4ea`
+  - source: `strategyqa`; gold: `yes`; challenge score: `8.0`
+  - details: `{'cue_count': 2, 'named_entity_count': 2, 'comparator_count': 2, 'negation_count': 0}`
