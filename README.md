@@ -7,6 +7,7 @@ Learning Research* (TMLR), 2026.
 
 - Paper and reviews: <https://openreview.net/forum?id=gp77UrXyjT>
 - arXiv preprint: <https://arxiv.org/abs/2606.19111>
+- Video (8 min): <https://youtu.be/_8R5cbJEHw8>
 
 The study operationalizes three classical leadership styles (transactional,
 transformational, situational) as **controllers** over a shared coordination
